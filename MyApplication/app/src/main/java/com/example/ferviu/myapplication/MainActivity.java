@@ -35,6 +35,5 @@ public class MainActivity extends AppCompatActivity {
 
         Toast.makeText(this,"toast",Toast.LENGTH_SHORT).show();
         new AlertDialog.Builder(this).setMessage("texto").setPositiveButton(android.R.string.ok,null).show();
-
     }
 }
