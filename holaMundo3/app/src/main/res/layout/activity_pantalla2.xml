@@ -1,0 +1,42 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="degradado">
+
+    <TextView
+    android:id="@+id/miMensaje"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="40dp"
+    android:layout_marginStart="50dp"
+    android:fontFamily="Arial"
+    android:textSize="20dp"
+    android:background="colorFondo"
+    android:textColor="colorTexto"
+    android:text="saludoRecoger" />
+
+    <LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="horizontal"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_marginTop="40dp" >
+
+        <Button
+    android:id="@+id/botonVolver"
+    android:background="colorBoton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:text="pulsarvolver" />
+
+        <ImageButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/btnImagen"
+    android:layout_marginStart="80dp"
+    android:src="@drawable/chichos"/>
+</LinearLayout>
+    </LinearLayout>
