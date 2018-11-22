@@ -38,17 +38,21 @@ public class Areas extends AppCompatActivity {
         AdaptadorFigura miAdaptador = new AdaptadorFigura(this);
         spinnerFiguras.setAdapter(miAdaptador);
         spinnerFiguras.setSelection(-1);
-
+        final TextView radio = findViewById(R.id.radio);
 
 
         spinnerFiguras.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String mensaje = "";
-                mensaje = "Item clicked => " + figuras[position];
+                mensaje = "Item clicked => " + figuras[position].getNombre();
                 index = position;
 
                 showToast(mensaje);
+
+                if (figuras[index].getNombre().toString().equals("Circulo")){
+                    radio.setText("Radio");
+                }
             }
 
             @Override
@@ -75,8 +79,9 @@ public class Areas extends AppCompatActivity {
     }
 
     public void showToast(String Text){
-        Toast.makeText(this, "", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, figuras[index].getNombre(), Toast.LENGTH_SHORT).show();
     }
+
 
     //adaptador
     class AdaptadorFigura extends ArrayAdapter {
